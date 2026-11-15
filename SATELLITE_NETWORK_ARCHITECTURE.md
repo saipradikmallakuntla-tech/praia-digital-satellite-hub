@@ -1,107 +1,35 @@
-# Praia Digital Satellite Network — Architecture and Final Verification
+# Coastal Satellite Network — seven direct GitHub Pages sites
 
-## 1. Verification snapshot
+Architecture revision: 2026-11-15. This document describes the implementation; observed build, HTTP and functional results belong in [DIRECT_PAGES_NETWORK_RELEASE.md](DIRECT_PAGES_NETWORK_RELEASE.md). The earlier four-site verification remains available in Git history and must not be mistaken for the seven-site release.
 
-**Live HTTP checks completed: 2026-11-14 at 19:31:34 UTC.** GitHub Pages settings were inspected during the same verification pass. All four public sites returned **HTTP 200 over HTTPS**, using normal TLS certificate and hostname validation. Requests starting with HTTP also resolved to the corresponding HTTPS URL and returned 200.
+## Topology and scope
 
-| Repository | Canonical live URL | HTTPS GET | TLS validation | Pages status | HTTPS enforced | Publish source |
-| --- | --- | --- | --- | --- | --- | --- |
-| [maresia-em-dia](https://github.com/saipradikmallakuntla-tech/maresia-em-dia) | [Maresia em Dia](https://saipradikmallakuntla-tech.github.io/maresia-em-dia/) | 200 | Passed | built | true | main / |
-| [acesso-a-praia](https://github.com/saipradikmallakuntla-tech/acesso-a-praia) | [Acesso à Praia](https://saipradikmallakuntla-tech.github.io/acesso-a-praia/) | 200 | Passed | built | true | main / |
-| [costa-em-contexto](https://github.com/saipradikmallakuntla-tech/costa-em-contexto) | [Costa em Contexto](https://saipradikmallakuntla-tech.github.io/costa-em-contexto/) | 200 | Passed | built | true | main / |
-| [praia-digital-satellite-hub](https://github.com/saipradikmallakuntla-tech/praia-digital-satellite-hub) | [Central de Aplicativos do Litoral](https://saipradikmallakuntla-tech.github.io/praia-digital-satellite-hub/) | 200 | Passed | built | true | main / |
+One owned hub plus six owned satellites under `saipradikmallakuntla-tech`, all independent static project sites. Each page provides six ordinary `a[data-network]` links to all other sites: 42 unique directed edges, excluding self-links. Navigation remains usable with JavaScript disabled, independent of hub filters or app state. Full URLs are listed in [NETWORK.md](NETWORK.md).
 
-Additional checks passed:
+Only these seven repositories may be modified. `praia-digital-seo-audit` is an excluded fork; its files, branches and disabled Pages setting remain untouched. No upstream or third-party repository changes, pull requests, custom-domain settings or CNAME files are part of this release. Existing contextual links to Praia Digital remain external, with no affiliation or reciprocal integration assumed.
 
-- Each live page has a self-referencing canonical URL matching the HTTPS URL above, including its trailing slash.
-- All three satellites contain direct HTTPS links back to the hub in their published HTML.
-- The hub contains direct HTTPS links to all three satellites. Every satellite also links to the other two.
-- All four GitHub Pages sites are public, use branch publishing (`build_type: legacy`) from `main` and `/`, and have no custom domain configured.
-- Every repository contains `.nojekyll` at its publication root.
-- The live HTML bytes match the corresponding repository `index.html` Git blob, confirming that the verified pages are the inspected application pages rather than generic GitHub error pages.
+## Responsibilities
 
-### Published HTML identity
-
-These are Git **blob** SHAs for the verified `index.html` content, not commit SHAs:
-
-| Application | HTML bytes | Git blob SHA |
-| --- | ---: | --- |
-| Maresia em Dia | 6297 | `defaf12f84a74e0f3df43712c1dcd4ea126c44ab` |
-| Acesso à Praia | 6813 | `c4312c89f7116aab49443a458788039fe50d02af` |
-| Costa em Contexto | 8248 | `e9342fe20c65ad96dd6d90add9692b733edd058d` |
-| Satellite Hub | 9045 | `05b243169d548b8651e7767efa8d48a090aa0cd4` |
-
-The hub branch head inspected before this documentation-only change was `97b6ad6d3a924610140c72a0b0dc6cfba65f39f0`. Adding this document can trigger another Pages build; the snapshot above records the actual observed deployment, not an assumption about a future build.
-
-## 2. Application responsibilities
-
-- **Maresia em Dia:** component maintenance planning, recurring due dates, local records, calendar export, backup and printable output. It organizes care; it is not an engineering inspection or a source of prescribed maintenance intervals.
-- **Acesso à Praia:** entrance/service references filtered by city and needs, with dated source evidence, unknowns and service status. A documented reference does not guarantee present-day operation or suitability for every visitor.
-- **Costa em Contexto:** a regional flood/landslide susceptibility source-and-scale guide. It helps users interpret map provenance and limitations; it does not produce parcel-level safety clearance or real-time hazard warnings.
-- **Satellite Hub:** the central directory, with promotional cards, descriptions, city/category filters and links to the three independent tools.
-
-## 3. Interlinking map
-
-```text
-                      praia-digital-satellite-hub
-                       /           |           \
-                      v            v            v
-              maresia-em-dia  acesso-a-praia  costa-em-contexto
-                      ^            ^            ^
-                      |            |            |
-                      +---- each links back ----+
-
-All three satellites also link directly to one another.
-Hub and satellites -> contextual resources on https://praia.digital/
-```
-
-Observed contextual routes:
-
-| Origin | Contextual Praia Digital destinations |
+| Repository | Responsibility and limits |
 | --- | --- |
-| Maresia em Dia | [Owner central](https://praia.digital/meu-imovel.html), [inspection checklist](https://praia.digital/apps/checklist-vistoria/) |
-| Acesso à Praia | [Neighborhood index](https://praia.digital/bairros/index.html) |
-| Costa em Contexto | [Guarujá city guide](https://praia.digital/cidades/guaruja.html), [property report](https://praia.digital/apps/relatorio-imovel/) |
-| Satellite Hub | [Main platform](https://praia.digital/), [existing app network](https://praia.digital/apps/), [neighborhood index](https://praia.digital/bairros/index.html) |
+| praia-digital-satellite-hub | PT/EN directory, six categories, municipality filters, strict six-app URL allowlist and release documentation. Coverage means references/examples, not availability. |
+| maresia-em-dia | Original PT maintenance organiser, recurrence, ICS/JSON export and local records. Not an engineering inspection or a prescribed maintenance schedule. Navigation-only HTML change in this release. |
+| acesso-a-praia | Original PT documentary beach-access pilot with dated sources and unknowns. No current operation or accessibility guarantee. Navigation-only HTML change. |
+| costa-em-contexto | Original PT regional source/scale guide. No parcel-level safety decision or real-time hazard alert. Navigation-only HTML change. |
+| rota-ciclo-costeira | New PT/EN bounded distance/speed/breaks calculator with optional return and preparation checklist. No route planning, field-verified cycleway, weather or safety prediction. |
+| balneabilidade-guia | New PT/EN UTC date comparator, evidence filters and checklist. Four fictional exercises; no actual bulletin, validity threshold or bathing clearance. CETESB is linked as an official starting point. |
+| feiras-e-servicos-litoral | New PT/EN four-record fictional directory, city/day/category/search filters and BRL budget calculator. No verified venue, schedule, price or operation. Municipal portals are starting points only. |
 
-The Praia Digital platform remains an external destination. These links do not imply official affiliation, reciprocal upstream links, shared accounts, or access to a live Praia Digital API. No upstream change is claimed by this verification.
+## Publication and files
 
-## 4. Static architecture and URL policy
+Each site is published from `main` and `/` using branch-based Pages (`legacy`), with `.nojekyll`, enforced HTTPS and a self-referencing canonical `https://saipradikmallakuntla-tech.github.io/<repo>/`. No DNS or custom-domain dependency. All runtime CSS and JavaScript are local; no npm/Vite build or remote runtime library is needed.
 
-- Four independently published GitHub Pages project sites under `saipradikmallakuntla-tech`.
-- Static `index.html`, local CSS and plain JavaScript; no npm/Vite compilation is needed for branch-root publication.
-- Local `core.js` files separate domain logic where present; Acesso à Praia loads a local `data.js` reference dataset.
-- HTML provides semantic page structure, descriptions, Open Graph metadata and WebApplication JSON-LD. The directory links remain ordinary anchors rather than depending on a router.
-- Canonicals identify each application's own HTTPS root. The hub is a directory, not the canonical replacement for its satellites.
-- Cross-repository navigation uses full HTTPS project URLs, avoiding relative-path mistakes between Pages project folders.
-- App records and exports must not be committed as user data or added to share URLs. Browser-local storage is not an independent security boundary between these project paths because they share the same origin.
+New repositories contain `index.html`, `styles.css`, `site.js`, `core.js`, `app.js`, `.nojekyll`, `README.md` and `NETWORK.md`. Pure core functions also export through CommonJS for Node tests. Static content uses Portuguese defaults; `site.js` applies English through explicit text attributes and a `coastal:language` event. Dynamic errors/results/filter cards are translated by each app. User input is rendered with textContent, not executable HTML. Invalid query options fall back to allowed defaults. Language can be selected with `?lang=en`; hub card links preserve language only for bilingual apps. Fixed footer network links always point to exact canonical roots.
 
-## 5. Evidence and verification method
+## Data boundaries and safety
 
-1. Read each repository's GitHub Pages configuration; check `html_url`, `status`, `https_enforced`, `public` and `source`.
-2. GET each canonical HTTPS URL with certificate verification enabled; require status 200 and the expected final URL.
-3. Request the HTTP variant and confirm the final response is the corresponding HTTPS page.
-4. Read live canonical tags and network anchors; compare the live HTML's Git blob hash against the repository's `index.html` blob SHA.
-5. Confirm `.nojekyll` in every repository and inspect the hub's existing root before adding this document.
+New apps do not send/store form data, request geolocation, track visitors, fetch live APIs or require accounts. Original browser-local records and datasets are unchanged. All project paths share one origin: localStorage is not a security isolation boundary. No sensitive app records are added to shared URLs or committed to repositories. Sample names, dates and day-of-week values are explicitly fictional; an editorial link-selection date is not an observation, sampling or current-service verification date.
 
-Public endpoint checks can be repeated without credentials:
+## Verification contract
 
-```sh
-for repo in maresia-em-dia acesso-a-praia costa-em-contexto praia-digital-satellite-hub; do
-  curl --fail --silent --show-error --location --proto '=https' \
-    --output /dev/null --write-out '%{http_code} %{url_effective}\n' \
-    "https://saipradikmallakuntla-tech.github.io/$repo/"
-done
-```
-
-The HTTP checks are an availability snapshot, not a continuous uptime guarantee. This pass verifies deployment, TLS, published HTML identity, canonical URLs and network links. It does not certify real-world accessibility, environmental safety or every interactive behavior in every browser. Source dates and operational service status still need ongoing editorial review.
-
-## 6. Next-batch ideas — exploratory, not launched
-
-Before creating further repositories, audit the current Praia Digital/ASF tools again for overlap and establish authoritative data sources.
-
-- **Actual-use utility diary:** local water/energy meter readings and consumption differences for intermittently occupied coastal homes; actual observations rather than investment forecasts.
-- **Dated rules-of-use evidence board:** organize source documents, responsible contacts and unresolved questions about condominium/municipal visitor and hosting rules, without issuing legal conclusions.
-- **Coastal waste and disposal reference:** verified, dated municipal guidance for recycling, bulky-item collection and appropriate disposal, with location coverage and unknowns explicit.
-
-These ideas are a backlog for discovery, not an authorization to create additional repositories or a claim that their data is already verified.
+Check HTML structure/labels/unique IDs/local assets/canonicals; JavaScript syntax; pure calculator and filter boundaries; browser form interaction and error focus; PT/EN dynamic state; keyboard navigation; responsive overflow; original-app regression flows; all 42 HTML edges with JavaScript off. After asynchronous builds, require TLS-verified HTTPS 200 at all seven exact canonical roots, compare deployed HTML and runtime assets with committed bytes, and re-read Pages settings. Record tests and limitations honestly in the release report; availability is a timestamped snapshot, not an uptime or real-world safety guarantee.
