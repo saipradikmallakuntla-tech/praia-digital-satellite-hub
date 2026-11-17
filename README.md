@@ -11,3 +11,7 @@ Static local HTML/CSS/JS, no build, dependency, analytics, backend, custom domai
 - [Release evidence and test limitations](DIRECT_PAGES_NETWORK_RELEASE.md)
 
 New utility datasets are explicitly fictional/reference-only. No current water-quality, verified cycling route or real market/service schedule is asserted. External links are contextual references, not an affiliation or an upstream integration.
+
+## Cross-app asset sync and editorial review
+
+[Cross-App Asset Sync and Trigger Workflow](DATA_ASSET_SYNC_AND_TRIGGER_WORKFLOW.md) documents the human-gated Gmail → private Drive register → GitHub Markdown → Gmail draft checklist. Documentation only: no automatic application-data sync, email sending, code changes, merge or deployment. Existing development commands above are historical context, not steps in this workflow.
