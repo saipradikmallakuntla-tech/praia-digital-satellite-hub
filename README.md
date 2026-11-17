@@ -1,32 +1,24 @@
-# Coastal Satellite Hub / Central de Aplicativos do Litoral
+# Central Costeira / Coastal Reference Hub
 
-[Site HTTPS / Live hub](https://saipradikmallakuntla-tech.github.io/praia-digital-satellite-hub/) · [Diretório atual / Current directory](NETWORK_DIRECTORY.md)
+[Guia publicado / Published guide](https://saipradikmallakuntla-tech.github.io/praia-digital-satellite-hub/) · [Fonte do guia / Guide source](docs/index.md) · [Diretório publicado — fonte / Published directory source](docs/NETWORK_DIRECTORY.md)
 
-## Português
+## PT
 
-A central existente continua preservada, incluindo seus seis cartões, filtros de município e categoria, interface PT/EN, links permitidos e navegação HTML. **Scope A: a partir da conversão documental, somente README.md e NETWORK_DIRECTORY.md são atualizados neste repositório.** Nenhum arquivo do site, CSS, JavaScript, dado ou configuração de publicação é alterado nesta etapa.
+Central independente de seis guias costeiros: manutenção, acesso à praia, contexto regional, pedal, balneabilidade e vida local. São referências documentais, não aplicativos interativos nem serviços oficiais.
 
-Os três novos destinos agora são guias documentais PT/EN, não aplicativos interativos:
+A publicação aprovada usa GitHub Pages em **main → /docs**, com HTTPS e sem domínio personalizado. Somente os arquivos Markdown em `docs` compõem o novo site. `docs/index.md` é a entrada; `docs/NETWORK_DIRECTORY.md` reúne os sete endereços. O [diretório da raiz](NETWORK_DIRECTORY.md) é um espelho para leitores do repositório.
 
-- [Rota Ciclo Costeira](https://saipradikmallakuntla-tech.github.io/rota-ciclo-costeira/) — referência manual de planejamento de pedal.
-- [Balneabilidade Guia](https://saipradikmallakuntla-tech.github.io/balneabilidade-guia/) — leitura de fontes, datas e limites; sem qualidade atual da água.
-- [Feiras e Serviços do Litoral](https://saipradikmallakuntla-tech.github.io/feiras-e-servicos-litoral/) — pontos de partida institucionais e exemplo manual de orçamento; sem agenda real.
+Os arquivos legados na raiz, inclusive `.nojekyll`, páginas, estilos, scripts e documentos históricos de arquitetura, permanecem inalterados e fora da nova fonte de publicação. Não há reescrita de histórico, novo código ou scripts de publicação.
 
-Os textos e cartões do site existente permanecem como estavam, inclusive descrições do plano interativo anterior. Para o escopo atual, consulte os próprios guias e o [diretório documental](NETWORK_DIRECTORY.md). Documentos de arquitetura anteriores permanecem inalterados como histórico; não são evidência de uma nova verificação funcional.
+## EN
 
-## English
+An independent directory of six coastal reference guides: maintenance, beach access, regional context, cycling, bathing-water information and local life. These are documents, not interactive applications or official services.
 
-The existing hub website is preserved, including its six cards, municipality/category filters, PT/EN interface, allowlisted app links and HTML navigation. **Scope A permits only README.md and NETWORK_DIRECTORY.md changes here from this conversion onward.** Website files, styles, scripts, data and publication settings are not changed in this pass.
+GitHub Pages publishes **main → /docs**, with HTTPS and no custom domain. The new publishing folder contains only Markdown. The root directory is a repository-facing mirror; legacy root files and architecture records are preserved outside the publishing source. No history rewriting or publication scripts are introduced.
 
-The three new destinations are now bilingual, non-interactive Markdown reference guides. Existing hub card text may describe the earlier interactive plan; the destination guides and current directory are authoritative for the new documentation scope. Previous architecture documents are left as historical records, not new functional-test evidence.
+## Limites / Limits
 
-## Rede / Network
-
-- [Maresia em Dia — manutenção / maintenance](https://saipradikmallakuntla-tech.github.io/maresia-em-dia/)
-- [Acesso à Praia — acesso / beach access](https://saipradikmallakuntla-tech.github.io/acesso-a-praia/)
-- [Costa em Contexto — fontes regionais / regional references](https://saipradikmallakuntla-tech.github.io/costa-em-contexto/)
-- [Rota Ciclo Costeira — guia Markdown / Markdown guide](https://saipradikmallakuntla-tech.github.io/rota-ciclo-costeira/)
-- [Balneabilidade Guia — guia Markdown / Markdown guide](https://saipradikmallakuntla-tech.github.io/balneabilidade-guia/)
-- [Feiras e Serviços — guia Markdown / Markdown guide](https://saipradikmallakuntla-tech.github.io/feiras-e-servicos-litoral/)
-
-Revisão editorial / Editorial revision: **2026-11-17**. Independent, reference-only network. No current water-quality, verified cycling route, real event schedule or service-operation guarantee is asserted. The four original websites retain their existing source and Pages configuration. The three new repositories contain only README.md and index.md on main; GitHub Pages renders them from main root. HTTPS, direct project URLs, no custom domains, no CNAME files and no history rewriting. The audit fork and all upstream/third-party repositories remain outside the modification scope.
+- Referência apenas / Reference only: no current water quality, verified route, accessibility guarantee, service schedule or property-risk assessment.
+- Confirmar fontes, datas e condições locais / Confirm original sources, dates and local conditions.
+- Revisão editorial / Editorial revision: **2026-11-17**; not a field inspection or source-update date.
+- `praia-digital-seo-audit` and all upstream/third-party repositories are excluded from changes.

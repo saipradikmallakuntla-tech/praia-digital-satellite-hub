@@ -1,29 +1,53 @@
-# Diretório da rede / Network Directory
+---
+title: "Diretório da Rede Costeira / Coastal Network Directory"
+layout: default
+---
 
-Revisão editorial / Editorial revision: **2026-11-17**.
+# Diretório da Rede Costeira / Coastal Network Directory
+
+**Revisão editorial / Editorial revision: 2026-11-17. Referência apenas / Reference only.**
 
 ## Endereços diretos / Direct addresses
 
-| Destino / Destination | Endereço HTTPS / HTTPS address | Escopo / Scope |
+| Destino / Destination | Guia HTTPS / HTTPS guide | Fonte Pages / Pages source |
 | --- | --- | --- |
-| Central / Hub | [praia-digital-satellite-hub](https://saipradikmallakuntla-tech.github.io/praia-digital-satellite-hub/) | Site existente preservado / Existing website preserved |
-| Manutenção / Maintenance | [maresia-em-dia](https://saipradikmallakuntla-tech.github.io/maresia-em-dia/) | Aplicativo original PT preservado / Original PT app preserved |
-| Acesso / Beach access | [acesso-a-praia](https://saipradikmallakuntla-tech.github.io/acesso-a-praia/) | Referências documentais originais / Original documentary references |
-| Contexto regional / Regional context | [costa-em-contexto](https://saipradikmallakuntla-tech.github.io/costa-em-contexto/) | Guia original preservado / Original guide preserved |
-| Pedal / Cycling | [rota-ciclo-costeira](https://saipradikmallakuntla-tech.github.io/rota-ciclo-costeira/) | Guia Markdown PT/EN, sem navegação de rotas / Markdown reference, no route navigation |
-| Água / Water | [balneabilidade-guia](https://saipradikmallakuntla-tech.github.io/balneabilidade-guia/) | Guia Markdown PT/EN, sem dados ao vivo / Markdown reference, no live data |
-| Vida local / Local life | [feiras-e-servicos-litoral](https://saipradikmallakuntla-tech.github.io/feiras-e-servicos-litoral/) | Guia Markdown PT/EN, sem agenda real / Markdown reference, no real schedule |
+| Central / Hub | [praia-digital-satellite-hub](https://saipradikmallakuntla-tech.github.io/praia-digital-satellite-hub/) | main → /docs |
+| Manutenção / Maintenance | [maresia-em-dia](https://saipradikmallakuntla-tech.github.io/maresia-em-dia/) | main → /docs |
+| Acesso à praia / Beach access | [acesso-a-praia](https://saipradikmallakuntla-tech.github.io/acesso-a-praia/) | main → /docs |
+| Contexto regional / Regional context | [costa-em-contexto](https://saipradikmallakuntla-tech.github.io/costa-em-contexto/) | main → /docs |
+| Pedal / Cycling | [rota-ciclo-costeira](https://saipradikmallakuntla-tech.github.io/rota-ciclo-costeira/) | main → / |
+| Água / Bathing-water information | [balneabilidade-guia](https://saipradikmallakuntla-tech.github.io/balneabilidade-guia/) | main → / |
+| Vida local / Local life | [feiras-e-servicos-litoral](https://saipradikmallakuntla-tech.github.io/feiras-e-servicos-litoral/) | main → / |
 
-## Scope A — limites de alteração / Change boundaries
+## PT
 
-PT: nos quatro repositórios existentes, esta etapa altera somente README.md e NETWORK_DIRECTORY.md. Sites, navegação HTML, estilos, scripts, dados, arquivos de arquitetura anteriores e configurações Pages são preservados. Nos três novos repositórios, a fonte atual contém apenas README.md e index.md: documentação bilíngue, tabelas, checklists, exemplos fictícios e seis links para os demais sites. NETWORK.md foi consolidado nesses dois documentos. Commits antigos continuam no histórico.
+A rede reúne guias independentes em português e inglês, com tabelas, checklists, exemplos manuais e fontes institucionais. Cada página inicial oferece seis links para os demais sites: sete destinos e **42 ligações dirigidas**, sem contar autorreferências ou links repetidos no diretório.
 
-EN: this pass changes only README.md and NETWORK_DIRECTORY.md in the four existing repositories. Their websites, HTML navigation, styles, scripts, data, earlier architecture files and Pages settings are preserved. Each new repository's current source contains only README.md and index.md: bilingual documentation, tables, checklists, fictional examples and six links to the other sites. NETWORK.md is consolidated into those documents. Earlier commits remain in history.
+Nos quatro primeiros repositórios, apenas `docs/index.md` e `docs/NETWORK_DIRECTORY.md` formam o site. Seus arquivos legados na raiz permanecem preservados, fora da fonte Pages. `README.md` e `NETWORK_DIRECTORY.md` na raiz explicam essa separação. Nos três últimos, a publicação continua na raiz, com `index.md`, `README.md` e `NETWORK_DIRECTORY.md`. Não há domínio personalizado, código novo ou scripts de publicação; o GitHub fornece a renderização do Markdown.
 
-## Publicação e limites / Publication and limits
+## EN
 
-Use direct HTTPS project roots. New guides publish from main root through GitHub-managed Markdown rendering, without authored HTML/CSS/JavaScript or test scripts. Generated website markup is not authored repository source. No custom domains or CNAME files are configured. The existing four sites retain their previous publication setup.
+This independent PT/EN network provides reference guides, tables, checklists, manual examples and institutional starting points. Each landing guide links to the other six sites: **42 directed cross-site connections**, excluding self-links and repeated directory entries.
 
-Links between all seven roots provide 42 directed paths when self-links are excluded. Documentation describes the intended/current source topology; live availability must be checked separately. No new functional-test, continuous-uptime, accessibility or real-world safety certification is asserted here. Existing hub cards may still describe the earlier interactive plan; consult the destination documents for the new guides' actual scope.
+The first four sites publish only their Markdown `docs` folder; legacy root files remain preserved outside the Pages source. Their root README and directory explain the separation. The last three publish Markdown from the repository root. HTTPS project URLs are used without custom domains. GitHub renders the Markdown; no authored web code or publication scripts are added.
 
-The network is independent. Reference links do not establish current water quality, verified routes, venue schedules, service operation or official affiliation. praia-digital-seo-audit and upstream/third-party repositories are excluded and must remain untouched.
+## Fontes e datas / Sources and dates
+
+| Evidência / Evidence | Origem / Origin | Tratamento da data / Date treatment |
+| --- | --- | --- |
+| Estrutura da rede / Network structure | Guias e configuração Pages / Guides and Pages settings | Revisão editorial acima; não é teste HTTP / Editorial revision, not an HTTP test |
+| Informação institucional / Institutional information | Fontes indicadas em cada guia / Sources listed in each guide | Confirmar publicação e atualização na origem / Confirm publication and update dates at source |
+| Exemplos / Examples | Aritmética e situações hipotéticas / Manual arithmetic and hypothetical situations | Fictícios; não descrevem condições atuais / Fictional, not current conditions |
+
+## Checklist / Checklist
+
+- [ ] Conferir a fonte original e sua data / Check the original source and its date.
+- [ ] Distinguir revisão editorial, coleta e publicação / Distinguish editorial, sampling and publication dates.
+- [ ] Confirmar local, acesso, funcionamento e avisos / Confirm location, access, operation and notices.
+- [ ] Tratar informação ausente como desconhecida / Treat missing information as unknown.
+
+## Limites e exclusões / Limits and exclusions
+
+No current water quality, bathing clearance, verified cycling route, accessibility guarantee, operating schedule, professional diagnosis or official affiliation is asserted. Não há garantia de segurança ou funcionamento. Build status and source checks are distinct from public HTTP availability and real-world verification.
+
+`praia-digital-seo-audit`, upstream forks and third-party repositories remain outside the modification scope. Legacy history is preserved.
